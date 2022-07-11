@@ -14,12 +14,12 @@ in_filename = switch(char_file_select,
        )
 
 char_tier_data = read.csv(in_filename)
-rm(char_file_select)
 # Renaming the empty column heading for the reduced data sets.
 # Reduced data sets are generated from data_cleaning_script.R.
 if(char_file_select %in% c(2,5)){
   colnames(char_tier_data)[1] = "Character"
 }
+rm(char_file_select)
 
 # FUNCTIONS.
 
